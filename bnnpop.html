@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .popup {
+        display: none;
+        position: fixed;
+        padding: 10px;
+        width: 280px;
+        left: 50%;
+        margin-left: -150px;
+        height: 180px;
+        top: 50%;
+        margin-top: -100px;
+        background: #fff;
+        border: 3px solid #f04a49;
+        z-index: 20;
+      }
+
+      #popup:after {
+        position: fixed;
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(10, 10, 10, 0.5);
+        z-index: -2;
+      }
+
+      #popup:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #fff;
+        z-index: -1;
+      }
+
+      /* Styling buttons & webpage */
+
+      body {
+        background: offwhite;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      button {
+        margin-top: 50px;
+        background-color: rgba(255, 255, 255, 0.3);
+        border: 3px solid #f04a49;
+        color: #f04a49;
+        font-size: 25px;
+        padding: 10px 20px;
+      }
+
+      button:hover {
+        background-color: #f04a49;
+        color: #fff;
+        border: 3px solid #f04a49;
+        transition: all 0.3s ease 0s;
+      }
+
+      p {
+        margin: 1em 0;
+        font-size: 16px;
+      }
+
+      .popupk {
+        display: none;
+        position: fixed;
+        padding: 10px;
+        width: 280px;
+        left: 50%;
+        margin-left: -150px;
+        height: 180px;
+        top: 50%;
+        margin-top: -100px;
+        background: #fff;
+        border: 3px solid #f04a49;
+        z-index: 20;
+      }
+
+
+      /* overlayer hai yhi */
+      #popupk:after {
+        position: fixed;
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -2;
+      }
+
+      #popupk:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #fff;
+        z-index: -1;
+      }
+
+      /* Styling buttons & webpage */
+
+      body {
+        background: offwhite;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      button {
+        margin-top: 50px;
+        background-color: rgba(255, 255, 255, 0.3);
+        border: 3px solid #f04a49;
+        color: #f04a49;
+        font-size: 25px;
+        padding: 10px 20px;
+      }
+
+      button:hover {
+        background-color: #f04a49;
+        color: #fff;
+        border: 3px solid #f04a49;
+        transition: all 0.3s ease 0s;
+      }
+
+      p {
+        margin: 1em 0;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="service_section"
+      style="
+        background-imagee: url('/assets/image/service_wallpaper.png');
+        margin-top: 80px;
+        margin-bottom: 200px;
+      "
+    >
+      <div class="container service_container">
+        <div class="row">
+          <div class="service">
+            <i class="fas fa-laptop-code"></i>
+            <h6 style="animation: slideAnimation 3s ease-in-out forwards">
+              Web Design
+            </h6>
+            <p>
+              Our team of experienced designers combines creativity, technical
+              expertise, and user-centric principles to deliver stunning and
+              effective website designs. We understand that your website is
+              often the first impression customers have of your business, and
+              we're dedicated to making it a memorable one.
+           
+      </div>
+    </div>
+
+    <button class="button" href="#" onclick="show('popup')">Button</button>
+
+    <div class="popup" id="popup">
+      <p>This is a popup!</p>
+      <p>Overlay uses <b>:before</b> and <b>:after</b> pseudo-classes.</p>
+      <p>Website will still remain visible behind this popup.</p>
+      <a href="#" onclick="hide('popup')">Close</a>
+    </div>
+
+    <script>
+      $ = function (id) {
+        return document.getElementById(id);
+      };
+
+      var show = function (id) {
+        $(id).style.display = "block";
+      };
+      var hide = function (id) {
+        $(id).style.display = "none";
+      };
+    </script>
+  </body>
+</html>
